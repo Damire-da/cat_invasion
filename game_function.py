@@ -10,9 +10,9 @@ def check_keydown_events(event, ai_settings, screen, ship, bullets):
     elif event.key == pygame.K_LEFT:
         ship.moving_left = True
     elif event.key == pygame.K_UP:
-        ship.moving_up == True
+        ship.moving_up = True
     elif event.key == pygame.K_DOWN:
-        ship.moving_down == True
+        ship.moving_down = True
     elif event.key == pygame.K_SPACE:
         # Создание новой пули и добавление её к группе
         new_bullet = Bullet(ai_settings, screen, ship)
@@ -25,9 +25,9 @@ def check_keyup_events(event, ship):
     elif event.key == pygame.K_LEFT:
         ship.moving_left = False
     elif event.key == pygame.K_UP:
-        ship.moving_up == False
+        ship.moving_up = False
     elif event.key == pygame.K_DOWN:
-        ship.moving_down == False
+        ship.moving_down = False
 
 def check_events(ai_settings, screen, ship, bullets):
     """Отслеживние событий клавиатуры и мыши."""

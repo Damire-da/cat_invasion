@@ -15,7 +15,7 @@ class Bullet(Sprite):
         self.rect.top = ship.rect.top
 
         # Позиция пули хранится в вещественном формате
-        self.y = float(self.rect.y)
+        self.x = float(self.rect.x)
 
         self.color = ai_settings.bullet_color
         self.speed_factor = ai_settings.bullet_speed_factor
@@ -23,9 +23,9 @@ class Bullet(Sprite):
     def update(self):
         """Перемещает пулю вверх по экрану"""
         # Обновление позиции пули
-        self.y -= self.speed_factor
+        self.x -= self.speed_factor
         # Обновление позиции прямоугольника
-        self.rect.y = self.y
+        self.rect.x = self.x
 
     def draw_bullet(self):
         """Вывод пули на экран"""
